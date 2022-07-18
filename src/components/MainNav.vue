@@ -23,10 +23,11 @@
           </ul>
         </nav>
         <div class="flex items-center h-full ml-auto">
-          <ProfileImage v-if="isLoggedIn" data-test="profile-image" />
-          <ActionButton
+          <profile-image v-if="isLoggedIn" data-test="profile-image" />
+          <action-button
             v-else
             text="Sign In"
+            :is-primary="true"
             data-test="login-button"
             @click="loginUser"
           />
