@@ -4,7 +4,7 @@
     :placeholder="placeholder"
     :value="value"
     class="w-full text-lg font-normal focus:outline-none"
-    @:input="handleInput"
+    @input="handleInput"
   />
 </template>
 
@@ -18,6 +18,7 @@ export default {
       default: "",
     },
   },
+  emits: ["handle-input"],
   data() {
     return {
       value: "",
@@ -26,6 +27,7 @@ export default {
   methods: {
     handleInput($event) {
       this.value = $event.target.value;
+      this.$emit("handle-input", this.value);
     },
   },
 };
