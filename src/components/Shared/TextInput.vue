@@ -22,10 +22,10 @@ export default {
       required: true,
     },
   },
-  emits: ["update: modelValue"],
+  emits: ["update:modelValue"],
   methods: {
     handleInput($event) {
-      this.$emit("update: modelValue", $event.target.value);
+      this.$emit("update:modelValue", $event.target.value);
     },
   },
 };
