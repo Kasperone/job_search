@@ -8,6 +8,8 @@ import { createStore } from "vuex";
 //   modules: {},
 // });
 
+export const LOGIN_USER = "LOGIN_USER";
+
 export const state = () => {
   return {
     isLoggedin: false,
@@ -15,7 +17,7 @@ export const state = () => {
 };
 
 export const mutations = {
-  LOGIN_USER(state) {
+  [LOGIN_USER](state) {
     state.isLoggedIn = true;
   },
 };
